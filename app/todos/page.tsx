@@ -1,6 +1,7 @@
 import TodoDelete from "@/components/DeleteTodo";
 import prisma from "@/prisma/db";
 import { todoAction } from "../action";
+export const dynamic = "dynamic-force";
 
 export default async function Todos() {
   const todos = await prisma.todos.findMany();
