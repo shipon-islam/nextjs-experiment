@@ -10,7 +10,7 @@ export const todoAction = async (formData: FormData) => {
     },
   });
   if (!newTodo) throw new Error("todo not created");
-  revalidatePath("/posts");
+  revalidatePath("/todos");
 };
 
 export const handleDelete = async (productId: string) => {
