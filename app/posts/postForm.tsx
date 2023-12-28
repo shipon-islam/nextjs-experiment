@@ -7,7 +7,7 @@ import { postAction } from "../action";
 export default function PostForm() {
   const formRef = useRef<HTMLFormElement>(null);
   const handleAction = async (formData: FormData) => {
-    const newPost = await postAction(formData);
+    await postAction(formData);
     formRef.current?.reset();
     toast.success("post created successfuly");
   };

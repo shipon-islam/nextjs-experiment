@@ -1,6 +1,5 @@
 import prisma from "@/prisma/db";
 import PostForm from "./postForm";
-export const dynamic = "force-dynamic";
 export default async function Posts() {
   const posts = await prisma.posts.findMany();
   const beutifyDate = (createdAt: Date) => {
